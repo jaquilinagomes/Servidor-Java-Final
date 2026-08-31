@@ -13,7 +13,7 @@ public class JwtService {
 
     private final SecretKey chaveSecreta;
 
-    public JwtService(@Value("${jwt.secret") String segredo) {
+    public JwtService(@Value("${jwt.secret}") String segredo) {
         this.chaveSecreta = Keys.hmacShaKeyFor(segredo.getBytes());
     }
 
